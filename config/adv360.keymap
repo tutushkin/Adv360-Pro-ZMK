@@ -30,16 +30,26 @@
   keymap {
     compatible = "zmk,keymap";
     #define LAYER_DEFAULT 0
-    #define LAYER_KEYPAD 1
-    #define LAYER_FN 2
-    #define LAYER_MOD 3
+    #define LAYER_HRMODS 1
+    #define LAYER_KEYPAD 2
+    #define LAYER_FN 3
+    #define LAYER_MOD 4
     default_layer {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog LAYER_KEYPAD                                                           &mo LAYER_MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &hm LGUI A     &hm LALT S    &hm LCTRL D    &hm LSHFT F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &hm RSHFT J  &hm RCTRL K     &hm RALT L    &hm LGUI SEMI &kp SQT
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &tog LAYER_HRMODS                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
         &mo LAYER_FN     &kp GRAVE &caps_word &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &kp DOWN &kp UP  &kp LBKT &kp RBKT &mo LAYER_FN
+      >;
+    };
+    homerow_mods_layer {
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                           &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans  &trans                                           &trans &trans &trans &trans &trans  &trans  &trans
+        &trans &hm LGUI A     &hm LALT S    &hm LCTRL D    &hm LSHFT F &trans  &trans        &trans &trans &trans &trans        &trans &trans &hm RSHFT J  &hm RCTRL K     &hm RALT L    &hm LGUI SEMI  &trans
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
     };
     keypad {
@@ -67,6 +77,16 @@
         &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
         &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
         &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_DEC   &bl BL_INC   &none &none &none
+      >;
+    };
+
+    transparent {
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                           &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans  &trans                                           &trans &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &trans        &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
     };
   };
