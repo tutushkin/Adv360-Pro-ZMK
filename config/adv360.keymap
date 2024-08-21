@@ -35,7 +35,7 @@
 
       #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
           NAME: NAME { \
-              compatible = "zmk,behavior-hold-tap";
+              compatible = "zmk,behavior-hold-tap"; \
               flavor = "balanced"; \
               tapping-term-ms = <280>; \
               quick-tap-ms = <QUICK_TAP_MS>; \
