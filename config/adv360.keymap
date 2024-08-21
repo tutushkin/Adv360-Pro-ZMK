@@ -69,7 +69,7 @@
       bindings = <
         &trans &trans &trans &trans &trans &trans &trans                                           &trans &trans &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans  &trans                                           &trans &trans &trans &trans &trans  &trans  &trans
-        &trans &hml LGUI A     &hml LALT S    &hml LCTRL D    &hml LSHFT F &trans  &trans        &trans &trans &trans &trans        &trans &trans &hm RSHFT J  &hm RCTRL K     &hm RALT L    &hm LGUI SEMI  &trans
+        &trans &hml LGUI A     &hml LALT S    &hml LCTRL D    &hml LSHFT F &trans  &trans        &trans &trans &trans &trans        &trans &trans &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L    &hmr LGUI SEMI  &trans
         &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
